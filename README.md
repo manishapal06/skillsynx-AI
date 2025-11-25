@@ -1,36 +1,177 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+SkillSynx-AI (Next.js + Tailwind + Google Gemini API + Socket Backend)
 
-## Getting Started
+🚀 Live App: https://skillsynx.vercel.app
 
-First, run the development server:
+📦 Frontend Repo: https://github.com/manishapal06/skillsynx-AI
 
-```bash
+📦 Backend Repo: https://github.com/manishapal06/skillsynx-AI-Socket
+
+SkillSync-AI is an AI-powered Job Role Recommendation and Skill Analysis platform.
+It analyzes a user's skillset using Google Gemini API, provides personalized insights, and shows real-time processing using Socket.IO.
+The UI is built with Next.js + Tailwind CSS for a clean and responsive experience.
+
+🧠 Core Features
+🔹 AI Skill Analysis
+
+Uses Google Gemini API
+
+Generates:
+
+Personalized job role suggestions
+
+Skill strengths
+
+Skill gaps
+
+Improvement roadmap
+
+Learning path
+
+🔹 Real-Time Processing (Socket.IO)
+
+Live AI response streaming
+
+Progress updates in real-time
+
+Faster user experience
+
+Event-based communication
+
+🔹 Modern UI (Next.js + Tailwind)
+
+Clean and responsive design
+
+Smooth animations
+
+Simple user flow
+
+Fast rendering (App Router)
+
+🔹 Backend Services
+
+Handles AI request pipeline
+
+Manages user skill data
+
+Formats AI output
+
+Manages real-time socket events
+
+🔧 Tech Stack
+Frontend
+
+Next.js
+
+Tailwind CSS
+
+Axios
+
+Socket.io Client
+
+React Hooks / Context
+
+Backend
+
+Node.js
+
+Express
+
+MongoDB (Mongoose)
+
+Socket.IO
+
+Google Gemini API
+
+CORS
+
+📂 Project Structure
+Frontend (Next.js Repo) — skillsynx-AI
+skillsynx-AI/
+│
+├── app/
+│   ├── page.js
+│   ├── components/
+│   ├── styles/
+│   ├── api/
+│   └── utils/
+├── public/
+├── package.json
+└── tailwind.config.js
+
+Backend (Socket Server Repo) — skillsynx-AI-Socket
+skillsynx-AI-Socket/
+│
+├── data/
+├── helper/
+├── models/
+├── db.js
+├── index.js
+├── project.txt
+├── package.json
+└── .gitignore
+
+⚙️ Frontend Setup
+git clone https://github.com/manishapal06/skillsynx-AI
+cd skillsynx-AI
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create .env.local:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+NEXT_PUBLIC_SOCKET_URL=http://localhost:5000
+NEXT_PUBLIC_GEMINI_KEY=your_api_key
 
-## Learn More
+⚙️ Backend Setup
+git clone https://github.com/manishapal06/skillsynx-AI-Socket
+cd skillsynx-AI-Socket
+npm install
+npm start
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create .env:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+PORT=5000
+MONGO_URL=your_mongo_url
+GEMINI_API_KEY=your_api_key
 
-## Deploy on Vercel
+🔌 Socket Events Used
+Event	Purpose
+connection	User connected
+skill-analysis	User sends skill input
+progress-update	Live updates
+ai-response	Final Gemini output
+disconnect	User left
+🤖 AI Processing Flow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+User enters skillset
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Data sent to backend through Socket
+
+Backend sends prompt → Gemini API
+
+AI generates structured response
+
+Live streaming updates shown in UI
+
+Final job role + improvement plan displayed
+
+📈 Future Enhancements
+
+User login & saved reports
+
+Downloadable PDF career report
+
+More job role categories
+
+Role-based dashboards
+
+Admin analytics
+
+Roadmap generator
+
+👩‍💻 Developer
+
+Manisha Pal , Akhil, Sagar, Manoj
+Full Stack Developer
+Creator of SkillSynx-AI
